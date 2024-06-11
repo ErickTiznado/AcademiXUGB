@@ -44,10 +44,10 @@ export default function LoginScreen({ navigation }) {
         <TouchableOpacity style={styles.loginButton} onPress={() => navigation.navigate('Inicio')}>
           <Text style={styles.loginButtonText}>Iniciar sesión</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Recuperacion')}>
           <Text style={styles.forgotPasswordText}>¿Olvidaste tu contraseña?</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Registro')}>
           <Text style={styles.signupPromptText}>¿No tienes una cuenta? por favor regístrate</Text>
         </TouchableOpacity>
       </View>
@@ -67,13 +67,13 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   mascot: {
-    width: 250, 
-    height: 250, 
+    width: 250,
+    height: 250,
     marginBottom: -40,
   },
   headerText: {
-    fontSize: 22, 
-    fontFamily: 'Merriweather_400Regular', 
+    fontSize: 22,
+    fontFamily: 'Merriweather_400Regular',
     textAlign: 'center',
     marginTop: -10,
   },
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     height: '70%',
-    justifyContent: 'space-evenly', 
+    justifyContent: 'space-evenly',
   },
   bodyTitle: {
     fontSize: 24,

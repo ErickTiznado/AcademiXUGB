@@ -7,7 +7,10 @@ import { useFonts } from 'expo-font';
 import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen';
 import RegistroScreen from './screens/RegistroScreen';
-import InicioScreen from './screens/InicioScreen'; // Importar InicioScreen
+import InicioScreen from './screens/InicioScreen';
+import RecuperacionScreen from './screens/RecuperacionScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import ChatScreen from './screens/ChatScreen';
 
 const Stack = createStackNavigator();
 
@@ -27,7 +30,10 @@ export default function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
-        <Stack.Screen name="Inicio" component={InicioScreen} /> 
+        <Stack.Screen name="Inicio" component={InicioScreen} />
+        <Stack.Screen name="Recuperacion" component={RecuperacionScreen} />
+        <Stack.Screen name="Perfil" component={ProfileScreen} />
+        <Stack.Screen name="Chat" component={ChatScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

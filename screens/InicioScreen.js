@@ -5,7 +5,7 @@ import { faUser, faClock, faCheckCircle, faCircle, faHome, faCalendar, faAssisti
 
 const { height } = Dimensions.get('window');
 
-export default function InicioScreen() {
+export default function InicioScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
@@ -87,11 +87,11 @@ export default function InicioScreen() {
           <FontAwesomeIcon icon={faCalendar} style={styles.footerIcon} />
           <Text style={styles.footerButtonText}>Calendario</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.footerButton}>
+        <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate('Chat')}>
           <FontAwesomeIcon icon={faAssistiveListeningSystems} style={styles.footerIcon} />
           <Text style={styles.footerButtonText}>Asistente</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.footerButton}>
+        <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate('Perfil')}>
           <FontAwesomeIcon icon={faUserCircle} style={styles.footerIcon} />
           <Text style={styles.footerButtonText}>Perfil</Text>
         </TouchableOpacity>
